@@ -6,9 +6,9 @@ metadata:
   labels:
     {{- include "jiralert.labels" . | nindent 4 }}
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
-    - port: 9097
+    - port: 30200
       targetPort: http
       protocol: TCP
       name: http
